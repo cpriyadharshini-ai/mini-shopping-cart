@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>mini shopping cart</h1>
+    </header>
+    <main>
+        <section>
+            <div class="search">
+                <input type="text" name="search" id="search">
+                <button onclick="searchProduct()">Search</button>
+                <div id="searchProduct"></div>
+            </div>
+            <div class="addproduct">
+                <input type="text" name="product" id="product">
+                <input type="number" name="price" id="price">
+                <input type="number" name="quantity" id="quantity">
+                <button onclick="addProduct()">Add cart</button>
+                <div id="show"></div>
+            </div>
+            <div class="addprice">
+                <button onclick="addPrice()">Add Price</button>
+                <div id="showPrice"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

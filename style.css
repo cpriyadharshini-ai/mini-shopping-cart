@@ -1,0 +1,32 @@
+header h1{
+    text-align: center;
+}
+section .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+section .addproduct{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+section .addprice{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+section input{
+    padding: 10px 30px 10px 5px;
+}
+section button{
+    padding: 10px 15px;
+}
