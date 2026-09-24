@@ -1,3 +1,6 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
 header h1{
     text-align: center;
 }
@@ -8,6 +11,10 @@ section .search{
     align-items: center;
     gap: 20px;
 }
+section #searchproduct{
+    text-align: center;
+    margin-top: 20px;
+}
 section .addproduct{
     margin-top: 20px;
     display: flex;
@@ -15,6 +22,10 @@ section .addproduct{
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+section #show{
+    text-align: center;
+    margin-top: 20px;
 }
 section .addprice{
     margin-top: 20px;
@@ -24,9 +35,39 @@ section .addprice{
     align-items: center;
     gap: 20px;
 }
-section input{
-    padding: 10px 30px 10px 5px;
+section #showPrice{
+    text-align: center;
+    margin-top: 20px;
 }
-section button{
-    padding: 10px 15px;
+section input{
+    width: 15%;
+    padding: 10px 0 10px 5px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+}
+.search #search{
+    width: 30%;
+}
+section .search-btn, section .add-btn, section .price-btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: purple;
+    color: white;
+}
+#remove-btn{
+    background-color: lightgray;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+#show > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    align-items: center;
+    margin: 10px 0;
 }

@@ -10,12 +10,42 @@ function addProduct(){
     quantity.value="";
     display();
 }
-function display(){
-    const show=document.getElementById("show");
-    let products=cart.map(pro=> 
-        `${pro.name} , ${pro.price}, ${pro.quantity}`
-    );
-    show.innerHTML=products.join("<br>");
+function display() {
+    const show = document.getElementById("show");
+
+    show.innerHTML = "";
+
+    cart.map((pro, index) => {
+
+        // 1. Create one container for this product
+        const item = document.createElement("div");
+
+        // 2. Put product information inside it
+        item.innerHTML = `
+            <span>Name: ${pro.name}</span>
+            <span>Price: ₹${pro.price}</span>
+            <span>Quantity: ${pro.quantity}</span>
+        `;
+
+        // 3. Create Remove button for THIS product
+        const button = document.createElement("button");
+        button.textContent = "❌";
+        button.id="remove-btn";
+        // 4. Button click
+        button.addEventListener("click", () => {
+
+            cart = cart.filter((product, i) => i !== index);
+
+            display();
+
+        });
+
+        // 5. Put button inside this product's container
+        item.appendChild(button);
+
+        // 6. Put complete product inside show
+        show.appendChild(item);
+    });
 }
 function addPrice(){
     let add=cart.reduce((sum, product)=>{
